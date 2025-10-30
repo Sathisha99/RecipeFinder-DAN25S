@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <script src="js/app.js" defer></script>
+    <header class="container">
+        <h1>Recipe Finder</h1>
+        <p class="tagline">Search meals from TheMealDB and explore ingredients.</p>
+    </header>
+
+    <main class="container">
+        <!-- Controls -->
+        <section id="controls" class="controls">
+            <input id="q" type="search" placeholder="Search meals by name…" aria-label="Search meals" />
+            <select id="category" aria-label="Filter by category">
+                <option value="">All categories</option>
+                <!-- Filled by JS -->
+            </select>
+            <button id="sort" data-dir="asc" type="button" aria-label="Sort">Sort A → Z</button>
+            <select id="perPage" aria-label="Results per page">
+                <option value="12" selected>12 / page</option>
+                <option value="24">24 / page</option>
+                <option value="48">48 / page</option>
+            </select>
+            <button id="favsToggle" type="button" aria-label="Show favorites only">All recipes</button>
+        </section>
+
+        <!-- Status messages -->
+        <section id="status" class="status" aria-live="polite" hidden></section>
+
+        <!-- Results grid -->
+        <section id="results" class="grid" aria-label="Search results"></section>
+
+        <!-- Pagination -->
+        <nav id="pager" class="pager" aria-label="Pagination" hidden>
+            <button id="prev" type="button" disabled>Prev</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="next" type="button" disabled>Next</button>
+        </nav>
+
+        <!-- Meta panel (VG: ingredient frequency, etc.) -->
+        <section id="meta" class="meta" aria-label="Insights"></section>
+    </main>
+
+    <!-- Details modal -->
+    <dialog id="mealModal">
+        <article class="modal">
+            <header>
+                <h2 id="modalTitle">Meal</h2>
+                <button id="closeModal" type="button" aria-label="Close">✕</button>
+            </header>
+            <div id="modalBody"></div>
+        </article>
+    </dialog>
+
+    <footer class="container">
+        <small>Data from <a href="https://www.themealdb.com/api.php" target="_blank" rel="noreferrer">TheMealDB</a></small>
+    </footer>
+
+</body>
+</html>
