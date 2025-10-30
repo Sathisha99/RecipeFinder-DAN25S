@@ -3,6 +3,8 @@ Final Project – Skriptspråk och databashantering (Recipe Finder using TheMeal
 
 **Recipe Finder**
 
+**Live Demo:** [Recipe Finder on GitHub Pages](https://sathisha99.github.io/RecipeFinder-DAN25S/)
+
 This is my final project for the course Programming Fundamentals (DAN25S) at Medieinstitutet.
 
 The project is a small web application built with HTML, CSS, and JavaScript that connects to TheMealDB API.
